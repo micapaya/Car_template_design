@@ -1,0 +1,72 @@
+/* scss */
+html {
+  background-size: cover; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: black; }
+
+header {
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  margin: 0;
+  padding-bottom: 30px;
+  background: url("../../src/images_pages/interior.jpeg");
+  background-size: 100%;
+  background-position: 0% 20%; }
+
+h1 {
+  color: white;
+  margin: 0;
+  font-family: 'Times New Roman';
+  font-size: 9em;
+  letter-spacing: -10px;
+  margin-top: 100px;
+  margin-left: -30%;
+  border-bottom: 1px solid white;
+  height: 135px;
+  transition: 2s; }
+
+h5 {
+  color: transparent;
+  font-family: 'Times New Roman';
+  font-size: 4em;
+  margin-top: 400px;
+  margin-left: -35%;
+  text-align: left;
+  transition: 2s; }
+
+p.cache {
+  width: 20vw;
+  font-size: 12px;
+  margin-left: 15vw;
+  margin-top: 12vh;
+  transition: 2s;
+  color: black; }
+
+#secundP {
+  margin-top: 25px; }
+
+blockquote {
+  color: transparent;
+  margin-left: 50vw;
+  margin-top: 25px;
+  background-color: transparent;
+  display: block;
+  padding: 25px;
+  transition: 2s;
+  border-bottom-right-radius: 25px; }
+
+#pic1 {
+  position: absolute;
+  right: 14vw;
+  width: 45vw;
+  top: 68vh;
+  transition: .1s; }
+
+/*# sourceMappingURL=main.css.map */
