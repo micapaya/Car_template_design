@@ -13,7 +13,17 @@ body {
 	background: black;
 	
 }
-
+nav {
+	background: none;
+	position: absolute;
+	right: 10px;
+	top:10px;
+}
+a {
+	text-decoration: none;
+	color: white;
+	margin-left: 12px;
+}
 header {
 	width: 100vw;
 	height: 30vh;
@@ -49,20 +59,30 @@ h5 {
 	margin-top: 400px;
 	margin-left: -35%;
 	text-align: left;
-	transition: 2s;
+	transition: 4s;
 
 
 }
 p.cache {
-	width: 20vw;
+	width: 30vw;
 	font-size: 12px;
-	margin-left: 15vw;
+	margin-left: 25vw;
+	margin-bottom: -10px;
 	margin-top: 12vh;
 	transition: 2s;
-	color: black;
+	color: transparent;
+
 }
 #secundP {
 		margin-top: 25px;
+		width: 25vw;
+	}
+
+#thirdP {
+		margin-top: 50px;
+		width: 27vw;
+		padding-left: 100px;
+		border-left: 1px solid white;
 	}
 blockquote {
 	color: transparent;
@@ -75,14 +95,66 @@ blockquote {
 	border-bottom-right-radius: 25px;
 
 }
+#pic {
+	animation-duration: 30s;
+  	animation-name: leftPic;
+  	animation-iteration-count: infinite;
+	float: left;
+	width: 350px;
+	height:90vh;
+	background: url('../../src/images_pages/interior.jpg');
+	background-size: 120%;
+	margin-top: -550px;
+	opacity: 0;
+	transition: 1.5s;
+}
 
+@keyframes leftPic {
+	0% {background-size: 120%;}
+	50% {background-size:135%;}
+	0% {background-size: 120%;}
+}
 #pic1 {
 	
 	
 	position: absolute;
-	right: 14vw;
+	right: 5vw;
 	width: 45vw;
-	top: 68vh;
+	top: 60vh;
 	transition:.1s;
 	
+}
+.car {
+	width: 60vw;
+	height: 100px;
+	position: absolute;
+	right: -55vw;
+	bottom: -300px;
+	margin-top: 50px;
+	border-top-left-radius: 20px;
+	padding-left: 25px;
+	transition: 2s;
+}
+#skills_button {
+	color: white;
+	height: 25px;
+	margin-top: 12px;
+	border-bottom: 1px solid white;
+	text-align: left;
+}
+ul {
+	color: white;
+	float: right;
+	margin-right: 25px;
+	display: flex;
+	list-style-type: none; 
+}
+
+ul li {
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-top: 0px;
+	font-size: 1.2em;
+	text-align: center;
+
 }
