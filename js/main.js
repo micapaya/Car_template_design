@@ -212,15 +212,33 @@ function playSkills() {
 
 	let button = document.getElementById('skills_button');
 	let containSkills = document.getElementById('containerSkills');
+	let cross1 = document.getElementById('cross_1');
+	let cross2 = document.getElementById('cross_2');
 	let PanToggle = true;
 
 	button.addEventListener("click", function( event ) {   
     	if(PanToggle){
+    		cross1.style.transform = 'rotate(135deg)';
+    		cross1.style.transformOrigin = '4.5px 1px';
+    		cross1.style.background = 'white';
+    		cross2.style.transform = 'rotate(-135deg)';
+    		cross2.style.transformOrigin = '4.5px 1px';
+    		cross2.style.background = 'white';
+    		button.style.color = 'white';
+    		button.style.borderBottom = '0.1px solid white';
     		containSkills.style.right = '0';
-    		setTimeout(playSkills, 1000);
+    		setTimeout(playSkills, 1200);
     		PanToggle = false;
     	}
     	else {
+    		cross1.style.transform = 'rotate(-45deg)';
+    		cross1.style.transformOrigin = '1.5px 1px';
+    		cross1.style.background = 'orange';
+    		cross2.style.transform = 'rotate(45deg)';
+    		cross2.style.transformOrigin = '1.5px 1px';
+    		cross2.style.background = 'orange';
+    		button.style.color = 'orange';
+    		button.style.borderBottom = '0.1px solid orange';
     		containSkills.style.right = '-55vw';
     		PanToggle = true;
     	}
