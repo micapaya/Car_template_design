@@ -17,18 +17,25 @@ function moovePic(){
 }
 
 function colorChange(){
+	let pictureBG = document.getElementById('backPic');
 	let para = document.getElementsByClassName('cache');
 	let headTitle = document.getElementsByClassName('title');
 	let cite = document.getElementById('quote1')
 	let picIn = document.getElementById('pic');
+	let logo = document.getElementById('logo007');
+	let underline = document.getElementById('underlinequote')
 	for(let i=0; i<para.length; i++)
 	{
     if(getScrollPos() > previousScroll)
     {
+    	pictureBG.style.background = "#191919";
     	para[i].style.color = "white";
     	cite.style.color= "white";
     	cite.style.backgroundColor = "#10181E";
-    	cite.style.marginLeft = "37vw"
+    	cite.style.marginLeft = "37vw";
+    	underline.style.width = "30vw";
+    	underline.style.marginLeft = "-10px";
+
     	para[i].style.marginLeft = "28vw";
     	para[1].style.marginLeft = "30vw";
     	para[2].style.marginLeft = "32vw";
@@ -39,16 +46,19 @@ function colorChange(){
 //h1
     	headTitle[1].style.marginTop ='690px';
     	headTitle[1].style.marginLeft ='-40%';
-    	headTitle[1].style.color= "white";
-    	headTitle[1].style.fontSize ='6em';
+
 
     	picIn.style.opacity = "1";
+    	logo.style.opacity = "1";
+    	logo.style.right = "100px";
+
 
     	
 		
 
    
 	} else {
+		pictureBG.style.background = "#040508";
 		para[i].style.color = "transparent";
 		cite.style.color= "transparent";
 		cite.style.backgroundColor = "transparent";
@@ -57,15 +67,17 @@ function colorChange(){
 		para[1].style.marginLeft = "15vw";
 		para[2].style.marginLeft = "100vw";
     	headTitle[0].style.marginTop ='100px';
-    	headTitle[0].style.marginLeft ='-20%';
+    	headTitle[0].style.marginLeft ='-43%';
     	headTitle[0].style.fontSize ='9em';
     	headTitle[0].style.height ='135px';
 //h1
-    	headTitle[1].style.marginTop ='400px';
-    	headTitle[1].style.marginLeft ='-35%';
-    	headTitle[1].style.color= "transparent";
-    	headTitle[1].style.fontSize ='6em';
+    	headTitle[1].style.marginTop ='130vh';
+    	headTitle[1].style.marginLeft ='-60%';
     	picIn.style.opacity = "0";
+    	logo.style.opacity = "0";
+    	logo.style.right = "-200px";
+    	underline.style.width = "100vw";
+    	underline.style.marginLeft = "-53vw";
     	
 	
 
@@ -76,11 +88,6 @@ function colorChange(){
 window.addEventListener('scroll', function(e) { 
 	colorChange();
 	moovePic();
-	
-	
-	
-	
-
 	previousScroll = getScrollPos();
 });	
 
@@ -233,12 +240,12 @@ function playSkills() {
     	else {
     		cross1.style.transform = 'rotate(-45deg)';
     		cross1.style.transformOrigin = '1.5px 1px';
-    		cross1.style.background = 'orange';
+    		cross1.style.background = '#919C99';
     		cross2.style.transform = 'rotate(45deg)';
     		cross2.style.transformOrigin = '1.5px 1px';
-    		cross2.style.background = 'orange';
-    		button.style.color = 'orange';
-    		button.style.borderBottom = '0.1px solid orange';
+    		cross2.style.background = '#919C99';
+    		button.style.color = '#919C99';
+    		button.style.borderBottom = '0.1px solid #919C99';
     		containSkills.style.right = '-55vw';
     		PanToggle = true;
     	}
