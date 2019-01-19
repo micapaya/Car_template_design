@@ -27,7 +27,7 @@ function colorChange(){
     {
     	para[i].style.color = "white";
     	cite.style.color= "white";
-    	cite.style.backgroundColor = "grey";
+    	cite.style.backgroundColor = "#10181E";
     	cite.style.marginLeft = "37vw"
     	para[i].style.marginLeft = "28vw";
     	para[1].style.marginLeft = "30vw";
@@ -57,7 +57,7 @@ function colorChange(){
 		para[1].style.marginLeft = "15vw";
 		para[2].style.marginLeft = "100vw";
     	headTitle[0].style.marginTop ='100px';
-    	headTitle[0].style.marginLeft ='-30%';
+    	headTitle[0].style.marginLeft ='-20%';
     	headTitle[0].style.fontSize ='9em';
     	headTitle[0].style.height ='135px';
 //h1
@@ -100,13 +100,13 @@ function finish() {
 
 function bip(){
 	counter = counter+20;
-	if (counter >= 7000) finish();
+	if (counter >= 4735) finish();
 	else{
 		document.getElementById('cm').innerHTML = counter ;
 	}
 }
 function start(){
-	if(counter === 7000){
+	if(counter === 4735){
 		finish();
 
 	}
@@ -128,13 +128,13 @@ function finish1() {
 
 function bip1(){
 	counter1 = counter1+2;
-	if (counter1 >= 812) finish1();
+	if (counter1 >= 436) finish1();
 	else{
 		document.getElementById('ch').innerHTML = counter1 ;
 	}
 }
 function start1(){
-	if(counter1 === 812){
+	if(counter1 === 436){
 		finish1();
 
 	}
@@ -156,13 +156,13 @@ function finish2() {
 
 function bip2(){
 	counter2 = counter2+1;
-	if (counter2 >= 320) finish2();
+	if (counter2 >= 310) finish2();
 	else{
 		document.getElementById('km').innerHTML = counter2 ;
 	}
 }
 function start2(){
-	if(counter2 === 320){
+	if(counter2 === 310){
 		finish2();
 
 	}
@@ -185,13 +185,13 @@ function finish3() {
 
 function bip3(){
 	counter3 = counter3+2;
-	if (counter3 >= 780) finish3();
+	if (counter3 >= 490) finish3();
 	else{
 		document.getElementById('nm').innerHTML = counter3 ;
 	}
 }
 function start3(){
-	if(counter3 === 780){
+	if(counter3 === 490){
 		finish3();
 
 	}
