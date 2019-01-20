@@ -4,7 +4,8 @@ function getScrollPos(){
 	return window.scrollY;
 }
 
-let previousScroll = 0
+let previousScroll = 0 ;
+let windowsizeY = window.innerHeight;
 
 function moovePic(){
 	// let element = document.getElementsByClassName('toto');
@@ -252,3 +253,40 @@ function playSkills() {
 	});
 
 
+function hiddeSection2(){
+	let targetStyleSection2 = document.getElementById('sec2');
+	let para1 = document.getElementById('sec2__par1');
+	let para2 = document.getElementById('image_para');
+	let para3 = document.getElementById('sec2__par3');
+		para1.style.margin = '500px';
+		para1.style.width = "220px";
+		para2.style.margin = '500px';
+		para2.style.width = "220px";
+		para3.style.margin = '500px';
+		para3.style.width = "350px";
+		targetStyleSection2.style.opacity = '0';
+
+	}
+function showSection2(){
+	let targetStyleSection2 = document.getElementById('sec2');
+	let para1 = document.getElementById('sec2__par1');
+	let para2 = document.getElementById('image_para');
+	let para3 = document.getElementById('sec2__par3');
+		para1.style.margin = '50px';
+		para1.style.width = "220px";
+		para2.style.margin = '50px';
+		para2.style.width = "220px";
+		para3.style.margin = '50px';
+		para3.style.width = "220px";
+		targetStyleSection2.style.opacity = '1';
+	}
+
+window.addEventListener("scroll", function(e) {   
+    // met en surbrillance la cible de mouseenter
+     
+     if (getScrollPos() >= window.innerHeight ) {
+		showSection2();
+	} else if (getScrollPos() < window.innerHeight ){
+		hiddeSection2();
+	}
+});

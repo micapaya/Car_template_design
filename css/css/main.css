@@ -196,13 +196,13 @@ ul li {
 
 section.section_2 {
   color: white;
-  width: 80vw;
+  width: 100vw;
   display: flex; }
 
 section.section_2 p {
-  width: 40vw;
-  margin: 50px;
-  flex-basis: auto; }
+  width: 350px;
+  height: 80vh;
+  transition: 4s; }
 
 .containerImage2 {
   height: 72vh;
@@ -210,12 +210,15 @@ section.section_2 p {
   background: url("../../src/images_pages/motor.jpg");
   background-size: 430%;
   background-position: 40% 40%;
-  float: right;
-  margin-top: -72vh; }
+  right: 0;
+  position: absolute;
+  top: 150vh; }
 
 #image_para {
   background: #10181E;
-  padding: 12px;
-  width: 350px; }
+  padding: 60px; }
+
+#sec2 {
+  transition: 1s; }
 
 /*# sourceMappingURL=main.css.map */
