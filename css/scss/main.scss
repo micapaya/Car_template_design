@@ -229,30 +229,63 @@ ul li {
 
 section.section_2 {
 	color: white;
-	width: 100vw;
-	display: flex;
+	width: 80vw;
+	display: grid;
+	grid-auto-columns: minmax(5%, auto) minmax(max-content, 1fr) minmax(33%, 40vmax) minmax(28%, 50vmax);
+	grid-column-gap: 2vw;
+
 }
 
 section.section_2 p  {
 	width: 350px;
 	height: 80vh;
-	transition: 4s;
+	
+}
+#sec2 {
+	transition: 1s;
 }
 .containerImage2 {
 	height: 72vh;
-	width: 20vw;
+	width: 300px;
+	margin-top: 150px;
+	animation-duration: 20s;
+  	animation-name: rightPic;
+  	animation-iteration-count: infinite;
 	background: url('../../src/images_pages/motor.jpg');
 	background-size: 430%;
 	background-position: 40% 40%;
-	right: 0;
-	position: absolute;
-	top: 150vh;
+	grid-column: 5/6;
+}
+@keyframes rightPic {
+	0% {
+		background-position: 40% 40%;
+	}
+	50% {
+
+		background-position: 90% 70%;
+	}
+
+	0% {
+
+		background-position: 40% 40%;
+	}
 }
 
 #image_para {
 	background: #10181E;
-	padding: 60px;
+	grid-column: 3/4;
+	margin-top: 100px;
+	display: block;
+	padding: 25px;
+	transition: 2.4s;
 }
-#sec2 {
-	transition: 1s;
+#sec2__par1 {
+	grid-column: 2/3;
+	margin-top: 50px;
+	transition: 1.4s;
+}
+#sec2__par3 {
+	grid-column: 4/5;
+	margin-top: 150px;
+	transition: 2s;
 }

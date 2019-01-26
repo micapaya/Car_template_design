@@ -58,7 +58,7 @@ function colorChange(){
 		
 
    
-	} else {
+	} else if (getScrollPos() <= windowsizeY/1.2) {
 		pictureBG.style.background = "#040508";
 		para[i].style.color = "transparent";
 		cite.style.color= "transparent";
@@ -258,13 +258,10 @@ function hiddeSection2(){
 	let para1 = document.getElementById('sec2__par1');
 	let para2 = document.getElementById('image_para');
 	let para3 = document.getElementById('sec2__par3');
-		para1.style.margin = '500px';
-		para1.style.width = "220px";
-		para2.style.margin = '500px';
-		para2.style.width = "220px";
-		para3.style.margin = '500px';
-		para3.style.width = "350px";
 		targetStyleSection2.style.opacity = '0';
+		para1.style.marginTop = '50px';
+		para2.style.marginTop = '100px';
+		para3.style.marginTop = '150px';
 
 	}
 function showSection2(){
@@ -272,21 +269,19 @@ function showSection2(){
 	let para1 = document.getElementById('sec2__par1');
 	let para2 = document.getElementById('image_para');
 	let para3 = document.getElementById('sec2__par3');
-		para1.style.margin = '50px';
-		para1.style.width = "220px";
-		para2.style.margin = '50px';
-		para2.style.width = "220px";
-		para3.style.margin = '50px';
-		para3.style.width = "220px";
+		para1.style.marginTop = '75px';
+		para2.style.marginTop = '135px';
+		para3.style.marginTop = '305px';
+
 		targetStyleSection2.style.opacity = '1';
 	}
 
 window.addEventListener("scroll", function(e) {   
     // met en surbrillance la cible de mouseenter
      
-     if (getScrollPos() >= window.innerHeight ) {
+     if (getScrollPos() >= windowsizeY/1.5 ) {
 		showSection2();
-	} else if (getScrollPos() < window.innerHeight ){
+	} else if (getScrollPos() <= windowsizeY/0.2 ){
 		hiddeSection2();
 	}
 });
