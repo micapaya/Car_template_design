@@ -260,8 +260,11 @@ function hiddeSection2(){
 	let para3 = document.getElementById('sec2__par3');
 		targetStyleSection2.style.opacity = '0';
 		para1.style.marginTop = '50px';
+		para1.style.transform = 'rotate(10deg)';
 		para2.style.marginTop = '100px';
+		para2.style.transform = 'rotate(10deg)';
 		para3.style.marginTop = '150px';
+		para3.style.transform = 'rotate(10deg)';
 
 	}
 function showSection2(){
@@ -270,8 +273,12 @@ function showSection2(){
 	let para2 = document.getElementById('image_para');
 	let para3 = document.getElementById('sec2__par3');
 		para1.style.marginTop = '75px';
+		para1.style.transform = 'rotate(0deg)';
 		para2.style.marginTop = '135px';
+		para2.style.transform = 'rotate(0deg)';
 		para3.style.marginTop = '305px';
+		para3.style.transform = 'rotate(0deg)';
+
 
 		targetStyleSection2.style.opacity = '1';
 	}
