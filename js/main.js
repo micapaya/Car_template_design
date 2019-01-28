@@ -60,7 +60,7 @@ function colorChange(){
 		
 
    
-	} else if (getScrollPos() <= windowsizeY/1.2) {
+	} else if (getScrollPos() <= windowsizeY/1.5) {
 		pictureBG.style.background = "#040508";
 		para[i].style.color = "transparent";
 		cite.style.color= "transparent";
@@ -311,9 +311,9 @@ function showQuotes (){
 window.addEventListener("scroll", function(e) {   
     // met en surbrillance la cible de mouseenter
      
-     if (getScrollPos() >= windowsizeY*1.7 ) {
+     if (getScrollPos() >= windowsizeY*2 ) {
 		showQuotes();
-	} else if (getScrollPos() <= windowsizeY*5 ){
+	} else if (getScrollPos() <= windowsizeY*2.01 ){
 		hiddeQuotes();
 	}
 });

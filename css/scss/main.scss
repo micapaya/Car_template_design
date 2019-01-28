@@ -5,6 +5,7 @@
 html {
 	
 	background-size: cover;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -327,7 +328,7 @@ section.section_2 p  {
 	height: 20vh;
 	display: flex;
 	background: #10181E;
-	margin-top: -100px;
+	margin-top: 80px;
 	margin-bottom: 100px;
 
 }
@@ -366,4 +367,52 @@ section.section_2 p  {
 	font-size: 5em;
 	margin: auto;
 
+}
+.pictures {
+	width: 100vw;
+	background: url('../../src/images_pages/onroad.jpg') no-repeat ,url('../../src/images_pages/logo.jpg') no-repeat , url('../../src/images_pages/color.jpg') no-repeat;
+	background-size: 50% , 25% ,46%;
+	background-position: 10% -50px , 75% 300px , 110% 180px;
+	background-attachment: fixed, scroll, fixed;
+	height: 60vh;
+}
+.section4 {
+	float:right;
+	margin-right: 33vw;
+	margin-top: 5vh;
+	padding: 20px;
+	width: 20vw;
+	color:white;
+	background: #10181E;
+}
+#red_log {
+	filter: grayscale(100%);
+	margin-right: -10vw;
+	margin-left: 30vw;
+	margin-bottom: -200px;
+}
+footer {
+	display: inline-grid;
+	grid-template-columns: 20vw 20vw 20vw 20vw 20vw ;
+	height: 25vh;
+	border-top: 1px solid white;
+}
+footer ul {
+	display: block;
+	font-size: 12px;
+
+}
+ul.firstCol {
+	grid-column: 2/3;
+	margin: auto;
+}
+
+ul.secundCol {
+	grid-column: 3/4;
+	margin: auto;
+}
+
+ul.thirdCol {
+	grid-column: 4/5;
+	margin: auto;
 }
