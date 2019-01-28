@@ -3,6 +3,9 @@
 function getScrollPos(){
 	return window.scrollY;
 }
+function getScrollPosSmooth(){
+	return window.scrollY/6;
+}
 
 let previousScroll = 0 ;
 let windowsizeY = window.innerHeight;
@@ -10,12 +13,12 @@ let windowsizeY = window.innerHeight;
 function moovePic(){
 	// let element = document.getElementsByClassName('toto');
 	// element.style.top = '100vh';
-	let Y = getScrollPos();
+	let Y = getScrollPosSmooth();
 	let div = document.getElementById('pic1');
 	// let nightPic = document.getElementById('night');
 
 
-	div.style.marginRight = (-Y/4) + "px";
+	div.style.marginRight = (-Y) + "px";
 	// nightPic.style.borderRadius = (Y/10) + "%" ;
 }
 
@@ -317,3 +320,7 @@ window.addEventListener("scroll", function(e) {
 		hiddeQuotes();
 	}
 });
+
+
+
+
