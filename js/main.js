@@ -12,9 +12,11 @@ function moovePic(){
 	// element.style.top = '100vh';
 	let Y = getScrollPos();
 	let div = document.getElementById('pic1');
+	// let nightPic = document.getElementById('night');
+
 
 	div.style.marginRight = (-Y/4) + "px";
-	
+	// nightPic.style.borderRadius = (Y/10) + "%" ;
 }
 
 function colorChange(){
@@ -260,11 +262,12 @@ function hiddeSection2(){
 	let para3 = document.getElementById('sec2__par3');
 		targetStyleSection2.style.opacity = '0';
 		para1.style.marginTop = '50px';
-		para1.style.transform = 'rotate(10deg)';
+		para1.style.transform = 'rotate3d(0,1,0,90deg)';
 		para2.style.marginTop = '100px';
-		para2.style.transform = 'rotate(10deg)';
+		para2.style.transform = 'rotate3d(0,1,0,90deg)';
 		para3.style.marginTop = '150px';
-		para3.style.transform = 'rotate(10deg)';
+		para3.style.transform = 'rotate3d(0,1,0,-90deg)';
+		
 
 	}
 function showSection2(){
@@ -273,11 +276,11 @@ function showSection2(){
 	let para2 = document.getElementById('image_para');
 	let para3 = document.getElementById('sec2__par3');
 		para1.style.marginTop = '75px';
-		para1.style.transform = 'rotate(0deg)';
+		para1.style.transform = 'rotate3d(0,1,0,0deg)';
 		para2.style.marginTop = '135px';
-		para2.style.transform = 'rotate(0deg)';
-		para3.style.marginTop = '305px';
-		para3.style.transform = 'rotate(0deg)';
+		para2.style.transform = 'rotate3d(0,1,0,0deg)';
+		para3.style.marginTop = '445px';
+		para3.style.transform = 'rotate3d(0,1,0,0deg)';
 
 
 		targetStyleSection2.style.opacity = '1';
@@ -290,5 +293,27 @@ window.addEventListener("scroll", function(e) {
 		showSection2();
 	} else if (getScrollPos() <= windowsizeY/0.2 ){
 		hiddeSection2();
+	}
+});
+
+function hiddeQuotes (){
+	let quotes = document.getElementById('inSec3');
+	quotes.style.transform = 'rotate3d(1,0,0,90deg)';
+
+}
+
+function showQuotes (){
+	let quotes = document.getElementById('inSec3');
+	quotes.style.transform = 'rotate3d(1,0,0,0deg)';
+
+}
+
+window.addEventListener("scroll", function(e) {   
+    // met en surbrillance la cible de mouseenter
+     
+     if (getScrollPos() >= windowsizeY*1.7 ) {
+		showQuotes();
+	} else if (getScrollPos() <= windowsizeY*5 ){
+		hiddeQuotes();
 	}
 });
