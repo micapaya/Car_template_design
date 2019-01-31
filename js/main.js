@@ -10,6 +10,8 @@ function getScrollPosSmooth(){
 
 let previousScroll = 0 ;
 let windowsizeY = window.innerHeight;
+let documentSizeY = document.body.offsetHeight;
+console.log(documentSizeY);
 
 
 
@@ -319,7 +321,7 @@ window.addEventListener("scroll", function(e) {
      
      if (getScrollPos() >= windowsizeY*2 ) {
 		showQuotes();
-	} else if (getScrollPos() <= windowsizeY*2 ){
+	} else if (getScrollPos() < (documentSizeY+250) - windowsizeY ){
 		hiddeQuotes();
 	}
 });
@@ -368,6 +370,9 @@ window.addEventListener("scroll", function(e) {
 	}
 });
 
+
+
+
 window.onmousemove = logMouseMoveX;
 
 function logMouseMoveX(e) {
@@ -387,3 +392,41 @@ function logMouseMoveX(e) {
 }
 
 
+let Switch = document.getElementById('switcher');
+let ToogleVideo = true;
+
+Switch.addEventListener("click", function( event ) {   
+    // met en surbrillance la cible de mouseenter
+    if(ToogleVideo){
+      switchVideo();
+      ToogleVideo = false;
+    } else {
+    	UnswitchVideo();
+    	ToogleVideo = true;
+    }
+});
+
+function switchVideo(){
+	let frameVideo1 = document.getElementById('switchable');
+	let frameVideo2 = document.getElementById('frame2');
+	let maskTop = document.getElementById('maskTop');
+	let maskBottom = document.getElementById('maskBottom');
+	
+
+	frameVideo1.style.marginLeft = '-200vw';
+	frameVideo2.style.marginLeft = '0';
+	maskTop.style.marginLeft = '200vw';
+	maskBottom.style.marginLeft = '200vw';
+}
+
+function UnswitchVideo(){
+	let frameVideo1 = document.getElementById('switchable');
+	let frameVideo2 = document.getElementById('frame2');
+	let maskTop = document.getElementById('maskTop');
+	let maskBottom = document.getElementById('maskBottom');
+	
+	frameVideo1.style.marginLeft = '0';
+	frameVideo2.style.marginLeft = '100vw';
+	maskTop.style.marginLeft = '-0';
+	maskBottom.style.marginLeft = '0';
+}

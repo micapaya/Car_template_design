@@ -14,6 +14,7 @@ body {
 nav {
   background: none;
   position: fixed;
+  z-index: 9999;
   right: 10px;
   top: 10px; }
 
@@ -312,26 +313,40 @@ section.section_2 p {
   margin: auto; }
 
 section.video {
-  display: flex; }
+  display: flex;
+  margin-top: -100px;
+  transition: 2s; }
+
+#frame2 {
+  margin-top: -610px !important;
+  margin-left: 100vw;
+  background: #191919;
+  height: 600px; }
 
 #video1 {
   margin: auto;
   width: 100vw; }
+
+#video2 {
+  margin: auto;
+  width: 100vw;
+  min-width: 100vw; }
 
 #maskTop {
   width: 100vw;
   height: 115px;
   background: #191919;
   position: absolute;
-  transition: 1s; }
+  transition: 2s;
+  pointer-events: none; }
 
 #maskBottom {
   width: 100vw;
-  height: 132px;
+  height: 140px;
   background: #191919;
   position: absolute;
-  bottom: -326vh;
-  transition: 1s; }
+  bottom: -314vh;
+  transition: 2s; }
 
 p.video_1 {
   color: white;
@@ -398,5 +413,15 @@ ul.secundCol {
 ul.thirdCol {
   grid-column: 4/5;
   margin: auto; }
+
+#switcher {
+  position: absolute;
+  color: white;
+  background: #10181E;
+  z-index: 9999;
+  cursor: pointer;
+  padding: 25px;
+  margin-left: 75vw;
+  margin-top: 150px; }
 
 /*# sourceMappingURL=main.css.map */
