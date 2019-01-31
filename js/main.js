@@ -328,10 +328,15 @@ window.addEventListener("scroll", function(e) {
 function paravideoShow(){
 	let paraLeft = document.getElementsByClassName('video_1');
 	let paraRight = document.getElementsByClassName('video_2');
+	let maskTop = document.getElementById('maskTop');
+	let maskBottom = document.getElementById('maskBottom');
+
 	let video = document.getElementById('video1');
 
 		paraLeft[0].style.marginLeft = '5vw';
 		paraRight[0].style.marginLeft = '70vw';
+		maskTop.style.height = '115px';
+		maskBottom.style.height = '132px';
 		video.play();
 		
 }
@@ -339,11 +344,15 @@ function paravideoShow(){
 function paravideoHidde(){
 	let paraLeft = document.getElementsByClassName('video_1');
 	let paraRight = document.getElementsByClassName('video_2');
+	let maskTop = document.getElementById('maskTop');
+	let maskBottom = document.getElementById('maskBottom');
 	let video = document.getElementById('video1');
 
 
 		paraLeft[0].style.marginLeft = '-50vw';
 		paraRight[0].style.marginLeft = '130vw';
+		maskTop.style.height = '415px';
+		maskBottom.style.height = '432px';
 		video.currentTime = 20.0;
 		video.pause();
 		
@@ -368,10 +377,10 @@ function logMouseMoveX(e) {
 
 
 	if (e.clientX < 650) {
-		parrallax.style.backgroundPosition = '10% -40px , 85% 320px , 110% 180px';
+		parrallax.style.backgroundPosition = '5% -140px , 55% 320px , 60% 50px';
 		
 	} else {
-		parrallax.style.backgroundPosition = '20% -40px , 95% 320px , 130% 180px';
+		parrallax.style.backgroundPosition = '15% -40px , 95% 320px , 110% 180px';
 	}
 
 

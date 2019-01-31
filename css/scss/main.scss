@@ -381,6 +381,7 @@ section.video {
 	height: 115px;
 	background: #191919;
 	position: absolute;
+	transition: 1s;
 }
 #maskBottom{
 	width: 100vw;
@@ -388,6 +389,7 @@ section.video {
 	background: #191919;
 	position: absolute;
 	bottom: -326vh;
+	transition: 1s;
 }
 p.video_1 {
 	color: white;
@@ -417,7 +419,7 @@ p.video_2 {
 	background-position: 10% -40px , 85% 320px , 110% 180px;
 	background-attachment: fixed, scroll, fixed;
 	height: 60vh;
-	transition: 1s;
+	transition: 2s;
 }
 .section4 {
 	float:right;
