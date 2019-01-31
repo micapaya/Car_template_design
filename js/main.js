@@ -7,10 +7,11 @@ function getScrollPosSmooth(){
 	return window.scrollY/6;
 }
 
+
 let previousScroll = 0 ;
 let windowsizeY = window.innerHeight;
 
-console.log(windowsizeY);
+
 
 function moovePic(){
 	// let element = document.getElementsByClassName('toto');
@@ -318,11 +319,62 @@ window.addEventListener("scroll", function(e) {
      
      if (getScrollPos() >= windowsizeY*2 ) {
 		showQuotes();
-	} else if (getScrollPos() <= windowsizeY*2.01 ){
+	} else if (getScrollPos() <= windowsizeY*2 ){
 		hiddeQuotes();
 	}
 });
 
 
+function paravideoShow(){
+	let paraLeft = document.getElementsByClassName('video_1');
+	let paraRight = document.getElementsByClassName('video_2');
+	let video = document.getElementById('video1');
+
+		paraLeft[0].style.marginLeft = '5vw';
+		paraRight[0].style.marginLeft = '70vw';
+		video.play();
+		
+}
+
+function paravideoHidde(){
+	let paraLeft = document.getElementsByClassName('video_1');
+	let paraRight = document.getElementsByClassName('video_2');
+	let video = document.getElementById('video1');
+
+
+		paraLeft[0].style.marginLeft = '-50vw';
+		paraRight[0].style.marginLeft = '130vw';
+		video.currentTime = 20.0;
+		video.pause();
+		
+}
+
+window.addEventListener("scroll", function(e) {   
+    // met en surbrillance la cible de mouseenter
+     
+     if (getScrollPos() >= windowsizeY*3 ) {
+		paravideoShow();
+	} else if (getScrollPos() <= windowsizeY*3 ){
+		paravideoHidde();
+	}
+});
+
+window.onmousemove = logMouseMoveX;
+
+function logMouseMoveX(e) {
+	let parrallax = document.getElementById('background_parallax');
+	e = event || window.event;	
+	mousePos = { x: e.clientX };
+
+
+	if (e.clientX < 650) {
+		parrallax.style.backgroundPosition = '10% -40px , 85% 320px , 110% 180px';
+		
+	} else {
+		parrallax.style.backgroundPosition = '20% -40px , 95% 320px , 130% 180px';
+	}
+
+
+}
 
 
