@@ -10,6 +10,8 @@ function getScrollPosSmooth(){
 let previousScroll = 0 ;
 let windowsizeY = window.innerHeight;
 
+console.log(windowsizeY);
+
 function moovePic(){
 	// let element = document.getElementsByClassName('toto');
 	// element.style.top = '100vh';

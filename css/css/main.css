@@ -311,6 +311,44 @@ section.section_2 p {
   font-size: 5em;
   margin: auto; }
 
+section.video {
+  display: flex; }
+
+video {
+  margin: auto;
+  width: 100vw; }
+
+#maskTop {
+  width: 100vw;
+  height: 115px;
+  background: #191919;
+  position: absolute; }
+
+#maskBottom {
+  width: 100vw;
+  height: 132px;
+  background: #191919;
+  position: absolute;
+  bottom: -326vh; }
+
+p.video_1 {
+  color: white;
+  position: absolute;
+  width: 250px;
+  margin-top: 150px;
+  margin-left: 5vw;
+  background: rgba(16, 24, 30, 0.7);
+  padding: 25px; }
+
+p.video_2 {
+  color: white;
+  position: absolute;
+  width: 250px;
+  margin-top: 450px;
+  margin-left: 70vw;
+  background: rgba(16, 24, 30, 0.7);
+  padding: 25px; }
+
 .pictures {
   width: 100vw;
   background: url("../../src/images_pages/onroad.jpg") no-repeat, url("../../src/images_pages/logo.jpg") no-repeat, url("../../src/images_pages/color.jpg") no-repeat;
@@ -322,7 +360,7 @@ section.section_2 p {
 .section4 {
   float: right;
   margin-right: 33vw;
-  margin-top: 5vh;
+  margin-top: 15vh;
   padding: 20px;
   width: 20vw;
   color: white;
