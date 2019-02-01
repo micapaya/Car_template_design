@@ -359,14 +359,16 @@ function paravideoHidde(){
 		video.pause();
 		
 }
-
 window.addEventListener("scroll", function(e) {   
     // met en surbrillance la cible de mouseenter
      
      if (getScrollPos() >= windowsizeY*3 ) {
-		paravideoShow();
+     	paravideoShow();
+		UnswitchParaFrame2();
+
 	} else if (getScrollPos() <= windowsizeY*3 ){
 		paravideoHidde();
+		switchParaFrame2();
 	}
 });
 
@@ -412,11 +414,15 @@ function switchVideo(){
 	let maskTop = document.getElementById('maskTop');
 	let maskBottom = document.getElementById('maskBottom');
 	
+	
 
 	frameVideo1.style.marginLeft = '-200vw';
 	frameVideo2.style.marginLeft = '0';
 	maskTop.style.marginLeft = '200vw';
 	maskBottom.style.marginLeft = '200vw';
+	Switch.style.transform = 'rotate3d(0,1,0,180deg)';
+	UnswitchParaFrame2();
+	
 }
 
 function UnswitchVideo(){
@@ -425,8 +431,27 @@ function UnswitchVideo(){
 	let maskTop = document.getElementById('maskTop');
 	let maskBottom = document.getElementById('maskBottom');
 	
+
+	
 	frameVideo1.style.marginLeft = '0';
 	frameVideo2.style.marginLeft = '100vw';
-	maskTop.style.marginLeft = '-0';
+	maskTop.style.marginLeft = '0';
 	maskBottom.style.marginLeft = '0';
+	Switch.style.transform = 'rotate3d(0,1,0,0deg)';
+	switchParaFrame2();
+	
+}
+
+function switchParaFrame2(){
+	let paraFrame1 = document.getElementsByClassName('video_3');
+	let paraFrame2 = document.getElementsByClassName('video_4');
+	paraFrame1[0].style.marginLeft = '400vw';
+	paraFrame2[0].style.marginLeft = '255vw';
+}
+
+function UnswitchParaFrame2(){
+	let paraFrame1 = document.getElementsByClassName('video_3');
+	let paraFrame2 = document.getElementsByClassName('video_4');
+	paraFrame1[0].style.marginLeft = '5vw';
+	paraFrame2[0].style.marginLeft = '55vw';
 }

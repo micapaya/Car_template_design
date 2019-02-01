@@ -368,6 +368,25 @@ p.video_2 {
   padding: 25px;
   transition: 1s; }
 
+p.video_3 {
+  color: white;
+  position: absolute;
+  width: 250px;
+  margin-left: 400vw;
+  margin-top: 350px;
+  background: rgba(16, 24, 30, 0.7);
+  padding: 25px;
+  transition: 2s; }
+
+p.video_4 {
+  color: white;
+  position: absolute;
+  width: 400px;
+  margin-left: 55vw;
+  background: rgba(16, 24, 30, 0.7);
+  padding: 25px;
+  transition: 2.2s; }
+
 .pictures {
   width: 100vw;
   background: url("../../src/images_pages/onroad.jpg") no-repeat, url("../../src/images_pages/logo.jpg") no-repeat, url("../../src/images_pages/color.jpg") no-repeat;
@@ -417,11 +436,23 @@ ul.thirdCol {
 #switcher {
   position: absolute;
   color: white;
-  background: #10181E;
-  z-index: 9999;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 999;
   cursor: pointer;
-  padding: 25px;
-  margin-left: 75vw;
-  margin-top: 150px; }
+  margin-left: 90vw;
+  margin-top: 300px;
+  display: flex;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  transition: 2s; }
+
+#switcher:hover {
+  filter: contrast(400%); }
+
+#switcher img {
+  width: 20px;
+  height: 20px;
+  margin: auto; }
 
 /*# sourceMappingURL=main.css.map */
