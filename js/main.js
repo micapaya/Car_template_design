@@ -381,6 +381,7 @@ function logMouseMoveX(e) {
 	let parrallax = document.getElementById('background_parallax');
 	e = event || window.event;	
 	mousePos = { x: e.clientX };
+	
 
 
 	if (e.clientX < 650) {
@@ -454,6 +455,7 @@ function UnswitchParaFrame2(){
 	let paraFrame2 = document.getElementsByClassName('video_4');
 	paraFrame1[0].style.marginLeft = '5vw';
 	paraFrame2[0].style.marginLeft = '55vw';
+	
 }
 
 
